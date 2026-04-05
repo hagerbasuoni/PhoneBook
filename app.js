@@ -4,9 +4,12 @@ import express from "express";
 import { info } from "./controllers/personcontroller.js";
 import router from "./Routes/routes.js";
 import mongoose from "mongoose";
-
-const DB = process.env.DATABASE.replace("<PASSWORD>", process.env.PASSWORD);
-console.log("Connecting to:", DB);
+if (process.argv.length < 3) {
+  console.log("give password as an argument");
+  process.exit(1);
+}
+const password = process.argv[2];
+const DB = process.env.DATABASE.replace("<PASSWORD>", password);
 mongoose
   .connect(DB, { family: 4 })
   .then((c) => {

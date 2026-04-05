@@ -7,8 +7,8 @@
   "type": "module",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js",
+    "start": "node app.js hager2",
+    "dev": "nodemon app.js hager2",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
