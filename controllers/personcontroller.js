@@ -1,4 +1,4 @@
-import Person from "./mongo.js";
+import Person from "../models/personmodel.js";
 
  const getAllPersons = async (req, res) => {
   try {
